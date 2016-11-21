@@ -1,2 +1,2 @@
 # receptors
-Generate and edit simple point receptor grids: polar, circle, rectangle, rings.
+R package to generate and edit simple point receptor grids: polar, circle, rectangle, rings.
