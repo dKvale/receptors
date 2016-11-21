@@ -1,4 +1,4 @@
-Package: receptor
+Package: receptors
 Type: Package
 Title: Generate simple point receptor grids.
 Version: 0.0.0.9000
