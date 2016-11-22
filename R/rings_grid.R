@@ -1,4 +1,4 @@
-#' Ring grid
+#' Rings grid
 #'
 #' Generate rings of receptors at increasing distances from a center point.
 #' @param center_x Grid's center X coordinate.
@@ -6,10 +6,10 @@
 #' @param radii Distances of receptor rings from center.
 #' @param spacing Distance between receptors. A single value will apply to all rings. Enter a sequence of values to apply a unique distance for each ring.
 #' @param show_plot Plot receptor grid.
-#' @keywords receptors grid ring
+#' @keywords receptors grid rings
 #' @export
 #' @examples
-#' ring_grid(center_x = 0,
+#' rings_grid(center_x = 0,
 #'           center_y = 0,
 #'           radii    = c(10,15,20,30,100),
 #'           spacing  = 7)
@@ -18,7 +18,7 @@
 
 #spacing_fun    = "1 + spacing_factor * radius / 50"
 
-ring_grid <- function(center_x       = 100,
+rings_grid <- function(center_x       = 100,
                       center_y       = 100,
                       radii          = c(10,15,20,30,100),
                       spacing        = 7,

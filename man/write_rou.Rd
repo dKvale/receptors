@@ -10,14 +10,14 @@ write_rou(data, path = NULL, grid_type = "disccart",
 \arguments{
 \item{data}{Dataframe of receptor coordinates and elevations. Requires columns: `x`, `y`, and `elevation`.}
 
-\item{path}{Path to write to. Default is NULL, which returns the text.}
+\item{path}{Path to write to. If NULL, returns result as text.}
 
-\item{grid_type}{Type of receptor grid. AERMOD option. Default is "disccart" (discrete cartesian).}
+\item{grid_type}{Type of receptor grid for AERMOD. Default is "disccart" (discrete cartesian).}
 
 \item{elev_units}{Units for elevation. Default is "meters".}
 }
 \description{
-Write a .rou receptor file for AERMOD from a data frame of receptor coordinates.
+Write a .rou receptor file for AERMOD from a dataframe of receptor coordinates.
 }
 \examples{
 receptors <- circle_grid(center_x = 50, center_y= 50, radius = 100)

@@ -24,9 +24,9 @@ circle_grid(center_x = 50, center_y = 50, radius = 100, spacing_x = 7,
 Generate a circular receptor grid
 }
 \examples{
-circle_grid(center_x = 0,
-            center_y = 0,
-            radius   = 100,
+circle_grid(center_x   = 0,
+            center_y   = 0,
+            radius     = 100,
             spacing_x  = 7,
             spacing_y  = 7)
 }
