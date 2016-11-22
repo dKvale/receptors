@@ -29,13 +29,13 @@ rings_grid <- function(center_x      = 100,
                           x   = numeric(),
                           y   = numeric())
 
-  for(radius in radii) {
+  for(i in 1:length(radii)) {
 
     #spacing <- eval(parse(text = spacing_fun))
 
-    circumf <- 2 * pi * radius
+    circumf <- 2 * pi * radii[i]
 
-    n_radials <- ceiling(circumf / spacing)
+    n_radials <- ceiling(circumf / spacing[i])
 
     for(radial in 1:n_radials) {
 
@@ -43,9 +43,9 @@ rings_grid <- function(center_x      = 100,
 
       angle_radians <- 2 * pi * radial / n_radials
 
-      new_x <- center_x + radius * cos(angle_radians)
+      new_x <- center_x + radii[i] * cos(angle_radians)
 
-      new_y <- center_y + radius * sin(angle_radians)
+      new_y <- center_y + radii[i] * sin(angle_radians)
 
       receptors[new_id, ] <- list(new_id, signif(new_x, 8), signif(new_y, 9))
 
