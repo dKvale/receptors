@@ -18,24 +18,24 @@
 
 #spacing_fun    = "1 + spacing_factor * radius / 50"
 
-rings_grid <- function(center_x      = 100,
-                      center_y       = 100,
-                      radii          = c(10,15,20,30,100),
-                      spacing        = 7,
-                      show_plot      = TRUE)
-{
+rings_grid <- function(center_x       = 100,
+                       center_y       = 100,
+                       radii          = c(10,15,20,30,100),
+                       spacing        = 7,
+                       show_plot      = TRUE)
+{ 
 
   receptors <- data.frame(id  = numeric(),
                           x   = numeric(),
                           y   = numeric())
 
-  for(radius in radii) {
+  for(i in 1:length(radii)) {
 
     #spacing <- eval(parse(text = spacing_fun))
 
-    circumf <- 2 * pi * radius
+    circumf <- 2 * pi * radii[i]
 
-    n_radials <- ceiling(circumf / spacing)
+    n_radials <- ceiling(circumf / spacing[i])
 
     for(radial in 1:n_radials) {
 
@@ -43,9 +43,9 @@ rings_grid <- function(center_x      = 100,
 
       angle_radians <- 2 * pi * radial / n_radials
 
-      new_x <- center_x + radius * cos(angle_radians)
+      new_x <- center_x + radii[i] * cos(angle_radians)
 
-      new_y <- center_y + radius * sin(angle_radians)
+      new_y <- center_y + radii[i] * sin(angle_radians)
 
       receptors[new_id, ] <- list(new_id, signif(new_x, 8), signif(new_y, 9))
 
@@ -54,7 +54,7 @@ rings_grid <- function(center_x      = 100,
 }
 
   # Plot receptors
-  if(show_plot) plot(receptors$x, receptors$y, pch = "1")
+  if(show_plot) plot(receptors$x, receptors$y, pch = "1"); points(center_x, center_y, col = "orange", pch=19)
 
   return(receptors)
 
