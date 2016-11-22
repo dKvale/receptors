@@ -18,11 +18,11 @@
 
 #spacing_fun    = "1 + spacing_factor * radius / 50"
 
-rings_grid <- function(center_x       = 100,
+rings_grid <- function(center_x      = 100,
                       center_y       = 100,
                       radii          = c(10,15,20,30,100),
                       spacing        = 7,
-                      show_plot  = TRUE)
+                      show_plot      = TRUE)
 {
 
   receptors <- data.frame(id  = numeric(),
