@@ -6,6 +6,7 @@
 #' @param radius Radius of receptor grid.
 #' @param spacing_x Distance between receptors in the x direction.
 #' @param spacing_y Distance between receptors in the y direction.
+#' @param inner_radius Radius of inner buffer left empty of receptors. 
 #' @param show_plot Plot receptor grid.
 #' @keywords receptors grid circle
 #' @export
@@ -17,12 +18,13 @@
 #'             spacing_y  = 7)
 #
 
-circle_grid <- function(center_x    = 50,
-                        center_y    = 50,
-                        radius      = 100,
-                        spacing_x   = 7,
-                        spacing_y   = 7,
-                        show_plot   = TRUE)
+circle_grid <- function(center_x     = 50,
+                        center_y     = 50,
+                        radius       = 100,
+                        spacing_x    = 7,
+                        spacing_y    = 7,
+                        inner_radius,
+                        show_plot    = TRUE)
 {
 
   receptors <- expand.grid(x = seq((center_x - floor((radius) / spacing_x) * spacing_x),
@@ -33,8 +35,15 @@ circle_grid <- function(center_x    = 50,
                                     spacing_y))
 
 
+  # Remove receptors further away than designated radius
   receptors <- subset(receptors, sqrt((receptors$x - center_x)**2 + (receptors$y - center_y)**2) <= radius)
 
+  # Remove receptors within the inner radius
+  if(!is.null(inner_radius)) {
+     if(inner_radius < 0) stop("inner_radius must be greater than zero.") 
+     receptors <- subset(receptors, sqrt((receptors$x - center_x)**2 + (receptors$y - center_y)**2) > inner_radius)
+  }
+  
   # Plot receptors
   if(show_plot) plot(receptors$x, receptors$y, pch = "1")
 

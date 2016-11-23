@@ -5,7 +5,7 @@
 \title{Circle grid}
 \usage{
 circle_grid(center_x = 50, center_y = 50, radius = 100, spacing_x = 7,
-  spacing_y = 7, show_plot = TRUE)
+  spacing_y = 7, inner_radius, show_plot = TRUE)
 }
 \arguments{
 \item{center_x}{Grid's center X coordinate.}
@@ -17,6 +17,8 @@ circle_grid(center_x = 50, center_y = 50, radius = 100, spacing_x = 7,
 \item{spacing_x}{Distance between receptors in the x direction.}
 
 \item{spacing_y}{Distance between receptors in the y direction.}
+
+\item{inner_radius}{Radius of inner buffer left empty of receptors.}
 
 \item{show_plot}{Plot receptor grid.}
 }

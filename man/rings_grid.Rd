@@ -4,7 +4,7 @@
 \alias{rings_grid}
 \title{Rings grid}
 \usage{
-rings_grid(center_x = 100, center_y = 100, radii = c(10, 15, 20, 30, 100),
+rings_grid(center_x = 0, center_y = 0, radii = c(10, 15, 20, 30, 100),
   spacing = 7, show_plot = TRUE)
 }
 \arguments{

@@ -3,11 +3,14 @@ Type: Package
 Title: Generate simple point receptor grids.
 Version: 0.0.0.9000
 Authors@R: person("Dorian", "Kvale", email = "dorian.kvale@state.mn.us", role = c("aut", "cre"))
-Description: Generate and edit simple point receptor grids: polar, circle, rectangle, rings. Save receptor files for EPA's air dispersion model -AERMOD-.
-Depends: R (>= 3.2.4)
+Description: Generate and edit simple point receptor grids: polar, circle,
+    rectangle, rings. Save receptor files for EPA's air dispersion model -AERMOD-.
+Depends:
+    R (>= 3.2)
 License: GNU GPLv3
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 5.0.1.9000
-Suggests: knitr,rmarkdown
+RoxygenNote: 5.0.1
+Suggests:
+    knitr,rmarkdown
 VignetteBuilder: knitr
