@@ -22,7 +22,7 @@ rings_grid <- function(center_x       = 0,
                        center_y       = 0,
                        radii          = c(10,15,20,30,100),
                        spacing        = 7,
-                       show_plot      = TRUE)
+                       show_plot      = TRUE, ...)
 { 
 
   receptors <- data.frame(id  = numeric(),

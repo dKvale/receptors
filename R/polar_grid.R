@@ -20,7 +20,7 @@ polar_grid <- function(center_x   = 100,
                        center_y   = 100,
                        radii      = c(10,15,20),
                        n_radials  = 36,
-                       show_plot  = TRUE)
+                       show_plot  = TRUE, ...)
   {
 
 

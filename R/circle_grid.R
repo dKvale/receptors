@@ -23,8 +23,8 @@ circle_grid <- function(center_x     = 50,
                         radius       = 100,
                         spacing_x    = 7,
                         spacing_y    = 7,
-                        inner_radius,
-                        show_plot    = TRUE)
+                        inner_radius = NULL,
+                        show_plot    = TRUE, ...)
 {
 
   receptors <- expand.grid(x = seq((center_x - floor((radius) / spacing_x) * spacing_x),

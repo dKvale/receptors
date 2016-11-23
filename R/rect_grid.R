@@ -29,7 +29,7 @@ rect_grid <- function(center_x       = 50,
                       spacing_y      = 7,
                       inner_x        = NULL,
                       inner_y        = NULL,
-                      show_plot  = TRUE)
+                      show_plot      = TRUE, ...)
 {
 
   receptors <- expand.grid(x = seq((center_x - floor((length/2) / spacing_x) * spacing_x),

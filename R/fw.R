@@ -6,13 +6,13 @@
 #' @keywords fixed width fw cut string
 #' @export
 #' @examples
-#' fw("cutThisString", nchars = 10)
+#' fw(c("2short", "cutThisString"), nchars = 10)
 # 
 # 
 
 # Extend or cut a string to a set length
-fw <- function(string = list("2short", "cutThisString"), 
-               nchars = 10) {
+fw <- function(string = "cutThisString", 
+               nchars = 10, ...) {
 
     new_string <- sprintf(paste0("%-", nchars, "s"), string)
     
