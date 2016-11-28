@@ -1,6 +1,6 @@
 #' Write .rou receptor file 
 #'
-#' Write a .rou receptor file for AERMOD from a dataframe of receptor coordinates.
+#' Write a .rou receptor file for AERMOD from a data frame of receptor coordinates.
 #' @param data Dataframe of receptor coordinates and elevations. Requires columns: `x`, `y`, and `elevation`.
 #' @param path Path to write to. If NULL, returns result as text.
 #' @param grid_type Type of receptor grid for AERMOD. Default is "disccart" (discrete cartesian).
@@ -25,7 +25,8 @@ write_rou <- function(data,
   if(nrow(data) < 1) return("Data frame is empty. At least 1 receptor is required.")
   
   rou <- c(paste0("** \n", "RE ELEVUNIT METERS\n"),
-                 paste0("  ", toupper(grid_type), "     ", 
+                 paste0("   ", 
+                        fw(toupper(grid_type), 13), 
                         fw(data$x, 12), 
                         fw(data$y, 15), 
                         fw(data$elevation, 11), collapse="\n")) 
