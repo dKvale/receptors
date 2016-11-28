@@ -17,7 +17,7 @@ write_rou(data, path = NULL, grid_type = "disccart",
 \item{elev_units}{Units for elevation. Default is "meters".}
 }
 \description{
-Write a .rou receptor file for AERMOD from a dataframe of receptor coordinates.
+Write a .rou receptor file for AERMOD from a data frame of receptor coordinates.
 }
 \examples{
 receptors <- data.frame(id = 0:5, x = 50:55, y= 50:55)

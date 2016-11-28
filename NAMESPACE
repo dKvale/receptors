@@ -3,6 +3,7 @@
 export(circle_grid)
 export(fw)
 export(polar_grid)
+export(read_rou)
 export(rect_grid)
 export(rings_grid)
 export(write_rou)
