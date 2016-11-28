@@ -24,8 +24,7 @@ circle_grid <- function(center_x     = 50,
                         spacing_x    = 7,
                         spacing_y    = 7,
                         inner_radius = NULL,
-                        show_plot    = TRUE, ...)
-{
+                        show_plot    = TRUE) {
 
   receptors <- expand.grid(x = seq((center_x - floor((radius) / spacing_x) * spacing_x),
                                    (center_x + floor((radius) / spacing_x) * spacing_x),
@@ -45,7 +44,7 @@ circle_grid <- function(center_x     = 50,
   }
   
   # Plot receptors
-  if(show_plot) plot(receptors$x, receptors$y, pch = "1")
+  if(show_plot) graphics::plot(receptors$x, receptors$y, pch = "1")
 
   receptors$id <- 1:nrow(receptors)
 

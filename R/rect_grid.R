@@ -13,30 +13,29 @@
 #' @keywords receptors grid rectangle
 #' @export
 #' @examples
-#' rect_grid(center_x = 0,
-#'           center_y = 0,
-#'           length   = 100,
-#'           width    = 200,
+#' rect_grid(center_x   = 0,
+#'           center_y   = 0,
+#'           length_x   = 100,
+#'           width_y    = 200,
 #'           spacing_x  = 7,
 #'           spacing_y  = 7)
 #
 
 rect_grid <- function(center_x       = 50,
                       center_y       = 50,
-                      length         = 100,
-                      width          = 200,
+                      length_x       = 100,
+                      width_y        = 200,
                       spacing_x      = 7,
                       spacing_y      = 7,
                       inner_x        = NULL,
                       inner_y        = NULL,
-                      show_plot      = TRUE, ...)
-{
+                      show_plot      = TRUE) {
 
-  receptors <- expand.grid(x = seq((center_x - floor((length/2) / spacing_x) * spacing_x),
-                                   (center_x + floor((length/2) / spacing_x) * spacing_x),
+  receptors <- expand.grid(x = seq((center_x - floor((length_x/2) / spacing_x) * spacing_x),
+                                   (center_x + floor((length_x/2) / spacing_x) * spacing_x),
                                    spacing_x),
-                           y = seq((center_y - floor((width/2) / spacing_y) * spacing_y),
-                                   (center_y + floor((width/2) / spacing_y) * spacing_y),
+                           y = seq((center_y - floor((width_y/2) / spacing_y) * spacing_y),
+                                   (center_y + floor((width_y/2) / spacing_y) * spacing_y),
                                    spacing_y))
 
   # Remove receptors within the inner boundary
@@ -48,7 +47,7 @@ rect_grid <- function(center_x       = 50,
   }
   
   # Plot receptors
-  if(show_plot) plot(receptors$x, receptors$y, pch = "1")
+  if(show_plot) graphics::plot(receptors$x, receptors$y, pch = "1")
 
   receptors$id <- 1:nrow(receptors)
 
