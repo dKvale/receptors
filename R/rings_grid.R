@@ -26,6 +26,7 @@ rings_grid <- function(center_x       = 0,
                           x   = numeric(),
                           y   = numeric())
   
+  # Expand spacing distance for each radii
   if(length(spacing) < length(radii)) spacing[length(spacing) : length(radii)] <- spacing[length(spacing)]
 
   for(i in 1:length(radii)) {
