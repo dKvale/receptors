@@ -4,34 +4,31 @@
 #' @param center_x Grid's center X coordinate.
 #' @param center_y Grid's center Y coordinate.
 #' @param radii Distances of receptor rings from center.
-#' @param spacing Distance between receptors. A single value will apply to all rings. Enter a sequence of values to apply a unique distance for each ring.
+#' @param spacing Distance between receptors. A single value will apply to all rings. Enter a vector of values to apply a unique spacing distance for each ring.
 #' @param show_plot Plot receptor grid.
 #' @keywords receptors grid rings
 #' @export
 #' @examples
 #' rings_grid(center_x = 0,
-#'           center_y = 0,
-#'           radii    = c(10,15,20,30,100),
-#'           spacing  = 7)
+#'            center_y = 0,
+#'            radii    = c(10,15,20,30,100),
+#'            spacing  = 7)
 #'
 #
-
-#spacing_fun    = "1 + spacing_factor * radius / 50"
 
 rings_grid <- function(center_x       = 0,
                        center_y       = 0,
                        radii          = c(10,15,20,30,100),
                        spacing        = 7,
-                       show_plot      = TRUE, ...)
-{ 
+                       show_plot      = TRUE) { 
 
   receptors <- data.frame(id  = numeric(),
                           x   = numeric(),
                           y   = numeric())
+  
+  if(length(spacing) < length(radii)) spacing[length(spacing) : length(radii)] <- spacing[length(spacing)]
 
   for(i in 1:length(radii)) {
-
-    #spacing <- eval(parse(text = spacing_fun))
 
     circumf <- 2 * pi * radii[i]
 
@@ -54,7 +51,7 @@ rings_grid <- function(center_x       = 0,
 }
 
   # Plot receptors
-  if(show_plot) plot(receptors$x, receptors$y, pch = "1"); points(center_x, center_y, col = "orange", pch=19)
+  if(show_plot) graphics::plot(receptors$x, receptors$y, pch = "1"); points(center_x, center_y, col = "orange", pch=19)
 
   return(receptors)
 

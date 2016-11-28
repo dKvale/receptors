@@ -14,7 +14,7 @@ rings_grid(center_x = 0, center_y = 0, radii = c(10, 15, 20, 30, 100),
 
 \item{radii}{Distances of receptor rings from center.}
 
-\item{spacing}{Distance between receptors. A single value will apply to all rings. Enter a sequence of values to apply a unique distance for each ring.}
+\item{spacing}{Distance between receptors. A single value will apply to all rings. Enter a vector of values to apply a unique spacing distance for each ring.}
 
 \item{show_plot}{Plot receptor grid.}
 }
@@ -23,9 +23,9 @@ Generate rings of receptors at increasing distances from a center point.
 }
 \examples{
 rings_grid(center_x = 0,
-          center_y = 0,
-          radii    = c(10,15,20,30,100),
-          spacing  = 7)
+           center_y = 0,
+           radii    = c(10,15,20,30,100),
+           spacing  = 7)
 
 }
 \keyword{grid}

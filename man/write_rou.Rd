@@ -5,7 +5,7 @@
 \title{Write .rou receptor file}
 \usage{
 write_rou(data, path = NULL, grid_type = "disccart",
-  elev_units = "meters", ...)
+  elev_units = "meters")
 }
 \arguments{
 \item{data}{Dataframe of receptor coordinates and elevations. Requires columns: `x`, `y`, and `elevation`.}
@@ -20,7 +20,7 @@ write_rou(data, path = NULL, grid_type = "disccart",
 Write a .rou receptor file for AERMOD from a dataframe of receptor coordinates.
 }
 \examples{
-receptors <- circle_grid(center_x = 50, center_y= 50, radius = 100)
+receptors <- data.frame(id = 0:5, x = 50:55, y= 50:55)
 
 receptors$elevation <- 250
 

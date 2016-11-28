@@ -22,10 +22,10 @@ polar_grid(center_x = 100, center_y = 100, radii = c(10, 15, 20),
 Generate a polar receptor grid
 }
 \examples{
-polar_grid(center_x = 0,
-           center_y = 0,
-           length = 1,
-           width = 2)
+polar_grid(center_x  = 0,
+           center_y  = 0,
+           radii     = c(10,15,20),
+           n_radials = 6)
 }
 \keyword{grid}
 \keyword{polar}

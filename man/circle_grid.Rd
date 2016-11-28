@@ -5,7 +5,7 @@
 \title{Circle grid}
 \usage{
 circle_grid(center_x = 50, center_y = 50, radius = 100, spacing_x = 7,
-  spacing_y = 7, inner_radius, show_plot = TRUE)
+  spacing_y = 7, inner_radius = NULL, show_plot = TRUE)
 }
 \arguments{
 \item{center_x}{Grid's center X coordinate.}

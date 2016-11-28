@@ -8,7 +8,7 @@
 #' @keywords receptors aermod write save rou
 #' @export
 #' @examples
-#' receptors <- circle_grid(center_x = 50, center_y= 50, radius = 100)
+#' receptors <- data.frame(id = 0:5, x = 50:55, y= 50:55)
 #' 
 #' receptors$elevation <- 250
 #' 
@@ -20,8 +20,7 @@
 write_rou <- function(data, 
                       path        = NULL,
                       grid_type   = "disccart",
-                      elev_units  = "meters", 
-                      ...) {
+                      elev_units  = "meters") {
   
   if(nrow(data) < 1) return("Data frame is empty. At least 1 receptor is required.")
   
