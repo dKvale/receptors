@@ -1,20 +1,24 @@
 #' Fixed width strings
 #'
-#' Adjust the length of a character string by by adding spaces to the end if too short or cutting from the end if too long.
-#' @param string Text to adjust. Can be passed a list.
-#' @param n_chars Number of characters or width to make each string.
+#' Adjust the length of a character string by by adding spaces to the end if too short, 
+#' or by cutting from the end if too long.
+#' @param string Text to adjust. Use a list or vector for multipe text strings.
+#' @param n Number of characters for \code{string}. If negative, \code{string} will be shortened by \code{n} characters.
 #' @keywords fixed width fw cut string
 #' @export
 #' @examples
-#' fw(c("2short", "cutThisString"), n_chars = 10)
+#' fw(c("2short", "cutThisString"), n = 10)
 # 
 # 
 
-# Extend or cut a string to a set length
-fw <- function(string = "cutThisString", 
-               n_chars = 10) {
-
-    new_string <- sprintf(paste0("%-", n_chars, "s"), string)
+fw <- function(string = "12345678910", 
+               n      = 10) {
+   
+    if(is.null(n) || is.na(n)) n <- nchar(string) 
     
-    return(substr(new_string, 1, n_chars))
+    if(n < 0) n <- nchar(string) + n
+    
+    new_string <- sprintf(paste0("%-", n, "s"), string)
+    
+    return(sapply(1:length(new_string), function(x) substr(new_string[[x]], 1, n[[x]])))
 }

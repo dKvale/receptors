@@ -4,18 +4,19 @@
 \alias{fw}
 \title{Fixed width strings}
 \usage{
-fw(string = "cutThisString", n_chars = 10)
+fw(string = "12345678910", n = 10)
 }
 \arguments{
-\item{string}{Text to adjust. Can be passed a list.}
+\item{string}{Text to adjust. Use a list or vector for multipe text strings.}
 
-\item{n_chars}{Number of characters or width to make each string.}
+\item{n}{Number of characters for \code{string}. If negative, \code{string} will be shortened by \code{n} characters.}
 }
 \description{
-Adjust the length of a character string by by adding spaces to the end if too short or cutting from the end if too long.
+Adjust the length of a character string by by adding spaces to the end if too short, 
+or by cutting from the end if too long.
 }
 \examples{
-fw(c("2short", "cutThisString"), n_chars = 10)
+fw(c("2short", "cutThisString"), n = 10)
 }
 \keyword{cut}
 \keyword{fixed}
