@@ -24,7 +24,7 @@ write_rou <- function(data,
   
   if(nrow(data) < 1) return("Data frame is empty. At least 1 receptor is required.")
   
-  rou <- c(paste0("** \n", "RE ELEVUNIT METERS\n"),
+  rou <- c(paste0("RE ELEVUNIT METERS\n"),
                  paste0("   ", 
                         fw(toupper(grid_type), 13), 
                         fw(data$x, 12), 
