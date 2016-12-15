@@ -18,7 +18,11 @@ fw <- function(string = "12345678910",
     
     if(n < 0) n <- nchar(string) + n
     
-    new_string <- sprintf(paste0("%-", n, "s"), string)
+    if(length(n) != length(string)) n[1:length(string)] <- n
     
-    return(sapply(1:length(new_string), function(x) substr(new_string[[x]], 1, n[[x]])))
+    new_string  <- sprintf(paste0("%-", n, "s"), string)
+    
+    new_string  <- substring(new_string, 1, n)
+    
+    return(new_string)
 }

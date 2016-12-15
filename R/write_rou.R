@@ -2,9 +2,9 @@
 #'
 #' Write a .rou receptor file for AERMOD from a data frame of receptor coordinates.
 #' @param data Dataframe of receptor coordinates and elevations. Requires columns: `x`, `y`, and `elevation`.
-#' @param path Path to write to. If NULL, returns result as text.
+#' @param path Path to write to. If NULL, return result as text.
 #' @param grid_type Type of receptor grid for AERMOD. Default is "disccart" (discrete cartesian).
-#' @param elev_units Units for elevation. Default is "meters".
+#' @param elev_units Units of elevation in \code{data}. Default is "meters".
 #' @keywords receptors aermod write save rou
 #' @export
 #' @examples
