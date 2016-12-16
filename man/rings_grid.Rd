@@ -14,7 +14,10 @@ rings_grid(center_x = 0, center_y = 0, radii = c(10, 15, 20, 30, 100),
 
 \item{radii}{Distances of receptor rings from center.}
 
-\item{spacing}{Distance between receptors. A single value will apply to all rings. Enter a vector of values to apply a unique spacing distance for each ring.}
+\item{spacing}{Distance between receptors. 
+A single value will apply to all rings. 
+Enter a vector of values to apply a unique spacing distance 
+for each ring.}
 
 \item{show_plot}{Plot receptor grid.}
 }

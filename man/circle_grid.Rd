@@ -14,9 +14,9 @@ circle_grid(center_x = 50, center_y = 50, radius = 100, spacing_x = 7,
 
 \item{radius}{Radius of receptor grid.}
 
-\item{spacing_x}{Distance between receptors in the x direction.}
+\item{spacing_x}{Distance between receptors on the X axis.}
 
-\item{spacing_y}{Distance between receptors in the y direction.}
+\item{spacing_y}{Distance between receptors on the Y axis.}
 
 \item{inner_radius}{Radius of inner buffer left empty of receptors.}
 

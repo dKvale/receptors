@@ -4,7 +4,7 @@
 \alias{rect_grid}
 \title{Rectangle grid}
 \usage{
-rect_grid(center_x = 50, center_y = 50, length_x = 100, width_y = 200,
+rect_grid(center_x = 50, center_y = 50, width_x = 100, length_y = 200,
   spacing_x = 7, spacing_y = 7, inner_x = NULL, inner_y = NULL,
   show_plot = TRUE)
 }
@@ -13,17 +13,17 @@ rect_grid(center_x = 50, center_y = 50, length_x = 100, width_y = 200,
 
 \item{center_y}{Grid's center Y coordinate.}
 
-\item{length_x}{Length of receptor grid in the x direction.}
+\item{width_x}{Width of receptor grid on the X axis.}
 
-\item{width_y}{Width of receptor grid in the y direction.}
+\item{length_y}{Length of receptor grid on the Y axis.}
 
-\item{spacing_x}{Distance between receptors in the x direction.}
+\item{spacing_x}{Distance between receptors on the X axis.}
 
-\item{spacing_y}{Distance between receptors in the y direction.}
+\item{spacing_y}{Distance between receptors on the Y axis.}
 
-\item{inner_x}{Length of inner buffer left empty of receptors.}
+\item{inner_x}{Width of inner buffer to leave empty.}
 
-\item{inner_y}{Width of inner buffer left empty of receptors.}
+\item{inner_y}{Length of inner buffer to leave empty.}
 
 \item{show_plot}{Plot receptor grid.}
 }
