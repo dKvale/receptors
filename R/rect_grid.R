@@ -3,12 +3,12 @@
 #' Generate a rectangular receptor grid
 #' @param center_x Grid's center X coordinate.
 #' @param center_y Grid's center Y coordinate.
-#' @param length_x Length of receptor grid in the x direction.
-#' @param width_y Width of receptor grid in the y direction.
-#' @param spacing_x Distance between receptors in the x direction.
-#' @param spacing_y Distance between receptors in the y direction.
-#' @param inner_x Length of inner buffer left empty of receptors.
-#' @param inner_y Width of inner buffer left empty of receptors.
+#' @param width_x Width of receptor grid on the X axis.
+#' @param length_y Length of receptor grid on the Y axis.
+#' @param spacing_x Distance between receptors on the X axis.
+#' @param spacing_y Distance between receptors on the Y axis.
+#' @param inner_x Width of inner buffer to leave empty.
+#' @param inner_y Length of inner buffer to leave empty.
 #' @param show_plot Plot receptor grid.
 #' @keywords receptors grid rectangle
 #' @export
@@ -23,19 +23,19 @@
 
 rect_grid <- function(center_x       = 50,
                       center_y       = 50,
-                      length_x       = 100,
-                      width_y        = 200,
+                      width_x        = 100,
+                      length_y       = 200,
                       spacing_x      = 7,
                       spacing_y      = 7,
                       inner_x        = NULL,
                       inner_y        = NULL,
                       show_plot      = TRUE) {
 
-  receptors <- expand.grid(x = seq((center_x - floor((length_x/2) / spacing_x) * spacing_x),
-                                   (center_x + floor((length_x/2) / spacing_x) * spacing_x),
+  receptors <- expand.grid(x = seq((center_x - floor((width_x/2) / spacing_x) * spacing_x),
+                                   (center_x + floor((width_x/2) / spacing_x) * spacing_x),
                                    spacing_x),
-                           y = seq((center_y - floor((width_y/2) / spacing_y) * spacing_y),
-                                   (center_y + floor((width_y/2) / spacing_y) * spacing_y),
+                           y = seq((center_y - floor((length_y/2) / spacing_y) * spacing_y),
+                                   (center_y + floor((length_y/2) / spacing_y) * spacing_y),
                                    spacing_y))
 
   # Remove receptors within the inner boundary

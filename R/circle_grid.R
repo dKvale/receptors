@@ -4,8 +4,8 @@
 #' @param center_x Grid's center X coordinate.
 #' @param center_y Grid's center Y coordinate.
 #' @param radius Radius of receptor grid.
-#' @param spacing_x Distance between receptors in the x direction.
-#' @param spacing_y Distance between receptors in the y direction.
+#' @param spacing_x Distance between receptors on the X axis.
+#' @param spacing_y Distance between receptors on the Y axis.
 #' @param inner_radius Radius of inner buffer left empty of receptors. 
 #' @param show_plot Plot receptor grid.
 #' @keywords receptors grid circle
