@@ -1,2 +1,16 @@
-# receptors
-R package to generate and edit simple point receptor grids for EPA's air dispersion model -AERMOD-. Grid options include: polar, circle, rectangle, and rings.  Save receptor files in AERMOD's .rou format.
+---  
+dev version: 0.0.0.9000  
+---  
+
+# receptors  
+
+This R package generates and edits simple point receptor grids for EPA's air dispersion model _AERMOD_.  
+
+Grid options include:  
+
+- polar  
+- circle  
+- rectangle  
+- rings (donuts)    
+
+Receptor files can be exported in AERMOD's _.rou_ text format.
