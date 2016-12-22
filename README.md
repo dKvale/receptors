@@ -8,9 +8,9 @@ This R package generates and edits simple point receptor grids for EPA's air dis
 
 Grid options include:  
 
-- polar  
-- circle  
-- rectangle  
-- rings (donuts)    
+- Polar  
+- Circle  
+- Rectangle  
+- Rings (donuts)    
 
 Receptor files can be exported in AERMOD's _.rou_ text format.
