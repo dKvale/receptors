@@ -4,6 +4,7 @@
 #' or by cutting from the end if too long.
 #' @param string Text to adjust. Use a list or vector for multipe text strings.
 #' @param n Number of characters for \code{string}. If negative, \code{string} will be shortened by \code{n} characters.
+#' @param after Logical. Add space before or after string. Default TRUE, i.e. n - length(string) spaces are inserted after string. Set to FALSE to add space before string
 #' @keywords fixed width fw cut string
 #' @export
 #' @examples
@@ -12,7 +13,8 @@
 # 
 
 fw <- function(string = "12345678910", 
-               n      = 10) {
+               n      = 10,
+               after  = TRUE) {
    
     if(is.null(n) || is.na(n)) n <- nchar(string) 
     
@@ -20,7 +22,11 @@ fw <- function(string = "12345678910",
     
     if(length(n) != length(string)) n[1:length(string)] <- n
     
+    if (after){
     new_string  <- sprintf(paste0("%-", n, "s"), string)
+    } else {
+    new_string  <- sprintf(paste0("%-", n - nchar(string), "s%s"), "", string)
+    }
     
     new_string  <- substring(new_string, 1, n)
     
