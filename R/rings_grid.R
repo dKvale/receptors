@@ -1,13 +1,14 @@
 #' Rings grid
 #'
 #' Generate rings of receptors at increasing distances from a center point.
-#' @param center_x Grid's center X coordinate.
-#' @param center_y Grid's center Y coordinate.
+#' @param center_x Grid's center X coordinate. The default is 0.
+#' @param center_y Grid's center Y coordinate. The default is 0.
 #' @param radii Distances of receptor rings from center.
 #' @param spacing Distance between receptors. 
 #'                A single value will apply to all rings. 
 #'                Enter a vector of values to apply a unique spacing distance 
 #'                for each ring.
+#'                The default is 7 meters.
 #' @param show_plot Plot receptor grid.
 #' @keywords receptors grid rings
 #' @export
