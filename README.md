@@ -25,7 +25,8 @@ remotes::install_github("dKvale/receptors")
 
 ## Use
 
-Let's create an AERMOD receptor file: `receptors.rou`. We can set the grid to have circles of receptors at every 5 meters from 5 to 100 meters from the center point.
+Let's create an AERMOD receptor file: `receptors.rou`. 
+We can set the grid to have a polar grid of receptors at every 5 meters from 5 to 100 meters from the center point.
 ```r
 library(receptors)
 
@@ -33,3 +34,4 @@ recepts <- polar_grid(radii = seq(5, 100, 5))
 
 write_rou(recepts, "receptors.rou")
 ```
+
