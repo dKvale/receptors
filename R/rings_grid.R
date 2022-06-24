@@ -48,8 +48,7 @@ rings_grid <- function(center_x       = 0,
 
       new_y <- center_y + radii[i] * sin(angle_radians)
 
-      receptors[new_id, ] <- list(new_id, signif(new_x, 8), signif(new_y, 9))
-
+      receptors[new_id, ] <- list(new_id, signif(round(new_x, 8), 8), signif(round(new_y, 9), 9))
     }
 
 }
@@ -60,5 +59,3 @@ rings_grid <- function(center_x       = 0,
   return(receptors)
 
 }
-
-
